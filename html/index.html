@@ -4,25 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="">
-    <title> Tienda Vadel
-
-    </title>
+    <title> Tienda Vadel</title>
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 
-<body style="background-color: azure;">
+<body>
+    <!-- header con logo y buscador -->
     <header>
-
         <img src="../img/logo.png" alt="logo" width="20%">
-
         <form action="">
             <input type="search" name="buscador" id="buscador" placeholder="Buscar productos">
             <a href="carrito.html"></a>
         </form>
     </header>
-    <nav>
 
-        <!--<h1><img src="../img/logo.png" alt="logo"></h1>-->
+<!-- Enlaces a otras páginas -->
+    <nav>
         <ul id="button">
             <li><a href=”#”>Inicio</a></li>
             <li><a href=”#”>Sobre nosotros</a></li>
@@ -31,87 +28,144 @@
             <li><a href=”#”>Descuentos</a></li>
             <li><a href=”#”>Contacto</a></li>
         </ul>
+    </nav>
+
+    <!-- Contenido de la página -->
+    <main>
+            <!-- Primer bloque -->
         <div>
-            <img src="../img/abrig.jpg" alt="abrigo" style="border: black 10px solid;" width="10%" height="10%">
+            <!-- Imagenes del producto-->
+            <div>
+                <img src="../img/abrig.jpg" alt="abrigo" style="border: black 10px solid;" width="10%" height="10%">
+            </div>
+
+            <!-- El título de las opciones de compra -->
+            <div>
+                <!-- Categoría -->
+                <ul>
+                    <li><a href="#">Tiena</a></li>
+                    <li><a href="#">Vestidos</a></li>
+                </ul>
+                <!-- Título del producto-->
+                <h3> Vestidos </h3>
+                <h4> Reluce este vestido de otoño</h4>
+                <h3>34€</h3>
+
+                <!-- Añadir al carrito-->
+                <form action="">
+                    <input type="number" name="cantidad" id="cantidad">
+                    <button>Añadir al carrito</button>
+                </form>
+                <!-- Devoluciones-->
+                <div>
+                    <img src="../img/logo_garantia.png"  alt="logo_garantia" width="1%">
+                    <p>Devoluciones hasta 30 días</p>
+                </div>
+                
+            </div>
+        </div>
+
+        <!-- Segundo bloque-->
+        <ul>
+            <li>
+                <a href="caracteristicas.html">
+                    <img src="#" alt="logo_caracteristicas">
+                    Características
+                </a>
+            </li>
+            <li>
+                <a href="opinones.html">
+                    <img src="#" alt="logo_opiniones">
+                    Opiniones (5)
+                </a>    
+            </li>
+        </ul>
+        <!-- Caracteristicas del producto-->
+        <p>El vestido del verano ahora en versión invierno, sí, hablamos del Pretty. Hemos diseñado el Woman con un estampado icónico, tejido de crepe, que no necesita plancha, con bolsillos y botones. Tiene manguita larga, ideal para la temporada. ¡El FAVORITO de TODAS! La modelo mide 1,62 m y lleva la talla 34.</p>
+        <div>
+            <div>
+                <h4>Opiniones destacadas</h4>
+                <a href="#">Ver todas las opiniones</a>
+            </div>
+            <div>
+                <textarea name="reseña" id="reseña" cols="30" rows="10">Reseñas ★★★★★</textarea>
+            </div>
+        </div>
+        <h3>Productos relacionados</h3>
+        <p>Los compradores suelen comprar productos relacionados</p>
+        <!-- Productos relacionados-->
+        <div>
+            <h3>Pantalón marrón</h3>
+            <p>Consigue ahora los mejores productos de nuestra tienda</p>
+            <button><img src="../img/pantalon-marron.jpg" alt="pantalon" style="border: black 10px solid;" width="10%" height="10%"></button>
+            <p>Consigue ahora los mejores productos en nuestra tienda</p>
+            <button>Añadir el carrito</button>
+            <button>Ver</button>
+
+            <h3>Pantalón marrón</h3>
+            <p>Consigue ahora los mejores productos de nuestra tienda</p>
+            <button><img src="../img/pantalon-marron.jpg" alt="pantalon" style="border: black 10px solid;" width="10%" height="10%"></button>
+            <p>Consigue ahora los mejores productos en nuestra tienda</p>
+            <button>Añadir el carrito</button>
+            <button>Ver</button>
+
+            <h3>Pantalón marrón</h3>
+            <p>Consigue ahora los mejores productos de nuestra tienda</p>
+            <button><img src="../img/pantalon-marron.jpg" alt="pantalon" style="border: black 10px solid;" width="10%" height="10%"></button>
+            <p>Consigue ahora los mejores productos en nuestra tienda</p>
+            <button>Añadir el carrito</button>
+            <button>Ver</button>
+        </div>
+        
+        
+
+
+<!-- Codigo para paginas futuras
+    <div>
+            
             <img src="../img/AR.jpg" alt="abrigo" style="border: black 10px solid;" width="10%" height="10%">
             <img src="../img/pantalon-marron.jpg" alt="pantalones" style="border: black 10px solid;" width="10%"
                 height="10%">
             <img src="../img/vest-lila.jpg" alt="vestido" style="border: black 10px solid;" width="10%" height="10%">
             <img src="../img/vest-neg.jpg" alt="vestido-negro" style="border: black 10px solid;" width="10%"
                 height="10%">
-        </div>
+        </div>-->
 
-        <h2>Regístrate</h2>
-        <form action="">
-            <p>Crea un cuenta con nosotros para conseguir tu primer descuento</p>
-            <input type="text" name="nombre" id="nombre" placeholder="Nombre">
-            <input type="text" name="apellido" id="apellido" placeholder="Apellido">
-            <p>
-                <input type="email" name="gmail" id="gmail" placeholder="ejemplo@gmail.com">
-            </p>
-            <p>
-                <input type="password" name="contraseña" id="contraseña" placeholder="contraseña">
-            </p>
-            <p>
-                <button>Crea cuenta ahora</button>
-            </p>
-            </div>
+        <!-- Garantías que se ofrecen al usuario-->
+    <ul>
+        <li>
+            <img src="" alt="pago">
+            <h4>Pago seguro</h4>
+            <p> 100% garantizado</p>
+        </li>
+        <li>
+            <img src="" alt="envio">
+            <h4>Envio gratis </h4>
+            <p>En pedidos de + 100</p>
 
+        </li>
+        <li>
+            <img src="" alt="garantia">
+            <h4>Devoluciones hasta 30 días </h4>
+            <p>En todos los gadgets</p>
+        </li>
+        <li>
 
-
-
-    </nav>
-    <main>
-
-        <div>
-            <h2>Inciciar sesión</h2>
-            <p>Accede con tus datos anteriores</p>
-            <form action="">
-
-                <input type="email" name="gmail" id="gmail" placeholder="gmail">
-                <p>
-                    <input type="password" name="contraseña" id="contraseña" placeholder="contraseña">
-                    <button type="submit">Iniciar sesion</button>
-                </p>
-        </div>
-        <div>
-            <ul>
-                <li>
-                    <img src="" alt="pago">
-                    <h4>Pago seguro</h4>
-                    <p> 100% garantizado</p>
-                </li>
-                <li>
-                    <img src="" alt="envio">
-                    <h4>Envio gratis </h4>
-                    <p>En pedidos de + 100</p>
-
-                </li>
-                <li>
-                    <img src="" alt="garantia">
-                    <h4>2 años de garantia </h4>
-                    <p>En todos los gadgets</p>
-                </li>
-                <li>
-
-                    <img src="" alt="oferta">
-                    <h4>Ofertas únicas </h4>
-                    <p>Precios de mayorista</p>
-                </li>
-            </ul>
-
-        </div>
+            <img src="" alt="oferta">
+            <h4>Ofertas únicas </h4>
+            <p>Precios de mayorista</p>
+        </li>
+    </ul>  
     </main>
 
     <footer>
         <div>
 
             <div>
-                <h3>VAdel Shop</h3>
+                <h3>Vadel Shop</h3>
                 <ul>
-                    <li><a href="">Centro de ayuda</a></li>
-                    <li><a href="">Servicio del consumidor</a></li>
-                    <li><a href="">Escríbenos</a></li>
+                    <li><a href="">Contacta con nosotros</a></li>
+                    <li><a href="">Atención al cliente</a></li>
                     <li><a href="">Servicio telefónico</a></li>
                 </ul>
 
