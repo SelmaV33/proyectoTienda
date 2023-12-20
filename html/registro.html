@@ -4,56 +4,125 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro</title>
+     <!-- Google fonts -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+     <!-- Bootstrap -->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+     <!-- Mis estilos -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/card.css">
+    <link rel="stylesheet" href="../css/form.css">
+
+    <style>
+        section{
+            display: flex;
+            gap: 24px;
+            margin: 40px 0;
+        }
+        section .caja{
+            width: 100%;
+        }
+    </style>
+
 </head>
 <body>
     <header>
-        <img src="../img/logo.png" alt="logo" width="20%">
-        <form action="">
-            <input type="search" name="buscador" id="buscador" placeholder="Buscar productos">
-            <a href="carrito.html"></a>
-        </form>
-    </header>
-    <nav>
-        
-        <div>
-            <ul>
-                <li><a href="#todoslosproductos" >Todos los productos</a></li>
-                <li> <a href="#sobrenosotro.html">Sobre nosotros</a></li>
-                <li> <a href="#contacto.html">Contacto</a></li>
-                <li><a href="#Gadgets.html">Gadgets</a></li>
-                <li><a href="#ofertas.html">ofertas</a></li>   
-            </ul>
+        <div class="wrap">
+            <a href="carrito.html" class="btn" id="carrito">
+                <i class="bi bi-cart-fill"></i> 
+                Carrito 
+                <span>150</span>
+            </a>
         </div>
-    </nav>
+    </header>
+    <div class="navegacion wrap">
+        <nav>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Contacto</a></li>
+                <li><a href="#">Ofertas</a></li>
+                <li><a href="#">Condiciones</a></li>
+            </ul>
+        </nav>   
+        <nav>
+            <ul>
+                <li><a href="#">Login</a></li>
+                <li><a href="#">Otra cosa</a></li>
+            </ul>
+        </nav>   
+      </div>
     <!-- Registro-->
-    <main>
-    <div>
-        <div>
-            <h2>Inciciar sesión</h2>
-            <p>Accede con tus datos anteriores</p>
-            <form action="">
+    <main class="wrap">
+
+        <section>
+
+            <div class="caja">
+                <h4 class="title">Iniciar sesión</h4>
+                <form action="">
+                    <div class="col-2">
+                        <div class="input-grp">
+                            <label for="">Nombre*</label>
+                            <input type="text" placeholder="Ejemplo: Rafa">
+                            <div class="error">Por favor, rellena tu nombre</div>
+                        </div>
+                        <div class="input-grp">
+                            <label for="">Apellido*</label>
+                            <input type="text" placeholder="Ejemplo: Campos">
+                            <div class="error">Por favor, rellena tu apellido</div>
+                        </div>
+                    </div>
+                    <div class="input-grp">
+                        <label for="">Email*</label>
+                        <input type="text" placeholder="email">
+                        <div class="error">Por favor, rellena tu apellido</div>
+                    </div>
+                    <input type="submit" class="btn btn-block" value="Iniciar sesión">
+                </form>
+            </div>
+            <div class="caja destacada">
+                <h4 class="title">Regístrate</h4>
+            </div>
+
+        </section>
+
+        </main>
+    <!--<main>
+    <div class="input-grap">
+        <div class="caja">
+            <h2 class="title">Inciciar sesión</h2>
+            <form action="" >
 
                 <input type="email" name="gmail" id="gmail" placeholder="gmail">
                 <p>
                     <input type="password" name="contraseña" id="contraseña" placeholder="contraseña">
+
                     <button type="submit">Iniciar sesion</button>
                 </p>
         </div>
         <div>
             <h2>Regístrate</h2>
-            <form action="">
+            <form class="contenedor">
                 <p>Crea un cuenta con nosotros para conseguir tu primer descuento</p>
-                <input type="text" name="nombre" id="nombre" placeholder="Nombre">
-                <input type="text" name="apellido" id="apellido" placeholder="Apellido">
-                <p>
-                    <input type="email" name="gmail" id="gmail" placeholder="ejemplo@gmail.com">
-                </p>
-                <p>
-                    <input type="password" name="contraseña" id="contraseña" placeholder="contraseña">
-                </p>
-                <p>
-                    <button>Crea cuenta ahora</button>
-                </p>
+                <div class="input">
+                    <p>
+                        <label >Nombre*</label>
+                    
+                        <input type="text" name="nombre" id="nombre" placeholder="Nombre">
+                        <div class="error"><p>Por favor, rellene tu nombre</p> </div>
+                    </p>
+                </div>
+                 <div class="input">
+                    <p>
+                        <label for="">Apellidos*</label>
+                        <input type="text" name="apellido" id="apellido" placeholder="Apellido">
+                    </p>
+                    <p>
+                        <button>Crea cuenta ahora</button> 
+                    </p>
+                    
+                </div>   
                 </div>
         </div>
     </div>
@@ -149,7 +218,7 @@
         </form>
     </div>
 
-</footer>
+</footer>-->
     
 </body>
 </html>

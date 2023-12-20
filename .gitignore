@@ -1,0 +1,9 @@
+# Librerías externas
+node_modules
+
+# recursos estáticos
+**/*.jpg
+**/*.mp4
+**/*.webp
+**/*.jfif
+**/*.min.js

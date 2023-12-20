@@ -4,69 +4,324 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Tienda Vadel</title>
+    <title> Shop Vadel</title>
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!-- Mis estilos -->
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/btn.css">
+    <link rel="stylesheet" href="../css/card.css">
+    <link rel="stylesheet" href="../css/form.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <!-- header con logo y buscador -->
     <header>
-        <img src="../img/logo.png" alt="logo" width="20%">
-        <form action="">
-            <input type="search" name="buscador" id="buscador" placeholder="Buscar productos">
-            <a href="carrito.html"></a>
-        </form>
+        <div class="wrap">
+          <img src="../img/logo.png" alt="logo" class="logo">
+            <div class="input-grp" id="buscador">
+                <input type="search" placeholder="Buscar...">
+            </div>
+            <a href="carrito.html" class="btn" id="carrito">
+                <i class="bi bi-bag-heart"></i>
+                Carrito 
+                <span>50</span>
+            </a>  
+        </div>    
     </header>
 
 <!-- Enlaces a otras páginas -->
-    <nav>
-        <ul id="button">
-            <li><a href=”#”>Inicio</a></li>
-            <li><a href=”#”>Sobre nosotros</a></li>
-            <li><a href=”#”>Servicios</a></li>
-            <li><a href=”#”>Productos</a></li>
-            <li><a href=”#”>Descuentos</a></li>
-            <li><a href=”#”>Contacto</a></li>
+
+<div class="navegacion">
+    <div class="wrap">
+      <nav>
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Contacto</a></li>
+            <li><a href="#">Ofertas</a></li>
+            <li><a href="#">Condiciones</a></li>
         </ul>
-    </nav>
+    </nav>   
+    <nav>
+        <ul>
+            <li><a href="#">Login</a></li>
+            <li><a href="#">Otra cosa</a></li>
+        </ul>
+    </nav> 
+    </div>  
+  </div>
 
     <!-- Contenido de la página -->
-    <main>
+    <main class="wrap">
+      
             <!-- Primer bloque -->
-        <div>
-            <!-- Imagenes del producto-->
-            <div>
-                <img src="../img/abrig.jpg" alt="abrigo" style="border: black 10px solid;" width="10%" height="10%">
+            <!-- Carrusel -->
+            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img class="d-block w-100" src="../img/traje-granate.jpg" alt="Traje granate">
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block w-100" src="../img/traje-rojo.jfif" alt="Jesey blanco">
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block w-100" src="../img/abrigo-negro.jpg" alt="traje rojo">
+                </div>
+              </div>
+              <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+             <!--<section class="jumbotron">
+                <div class="wrap"> 
+                  <h1 class="h2">Las mejores ofertas de Shop Vadel</h1>
+                  <p>Consiguelas ahora con hast un 50% de descuento</p>
+                 <a href="#" class="btn">Compra ya</a>
+                </div>
+              </section>-->
+       
+        <!-- Seccion de productos -->
+        <section class="wrap">
+
+            <div class="titulo-cat">
+              <h4>Nueva colección</h4>
+              <a href="../html/nuevaColeccion.html" class="btn">Ver todos</a>
             </div>
 
-            <!-- El título de las opciones de compra -->
+            <div class="tarjetas">
+              <div class="card">
+                <div class="image" style="background-image: url(../img/pantalon-marron.jpg);"></div>
+                <div class="contenido">
+                  <div class="top">
+                    <h4>Pantalón</h4>
+                    <div class="h4">40<i class="bi bi-currency-euro m-color"></i></div>
+                  </div>
+        
+                  <div class="valoracion">
+                    <span class="m-color">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                    </span>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                </div>
+      
+                  <div class="actions">
+                    <button class="carrito">Añadir al carrito</button>
+                    <a href="#" class="btn btn-secundario">Ver</a>
+                  </div>
+                  
+                </div> <!-- Cierre de div cotenido de tarjeta -->
+              </div> <!-- Cierre de div card -->
+              <div class="card">
+                <div class="image" style="background-image: url(../img/abrigo.jpg);"></div>
+                <div class="contenido">
+        
+                  <div class="top">
+                    
+                    <h4>Abrigo</h4>
+                    <div class="h4">70<i class="bi bi-currency-euro m-color"></i></div>
+                  </div>
+        
+                  <div class="valoracion">
+                    <span class="m-color">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                    </span>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                </div>
+                  <div class="actions">
+                    <button class="carrito">Añadir al carrito</button>
+                    <a href="#" class="btn btn-secundario">Ver</a>
+                  </div>
+                </div> <!-- Cierre de div cotenido de tarjeta -->
+              </div> <!-- Cierre de div card -->
+              <div class="card">
+                <div class="image" style="background-image: url(../img/Vestido-negro.jpg);"></div>
+                <div class="contenido">
+        
+                  <div class="top">
+                    <h4>vestido-negro</h4>
+                    <div class="h4">30<i class="bi bi-currency-euro m-color"></i></div>
+                  </div>
+        
+                  <div class="valoracion">
+                    <span class="m-color">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                    </span>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                </div>
+                  <div class="actions">
+                    <button class="carrito">Añadir al carrito</button>
+                    <a href="#" class="btn btn-secundario">Ver</a>
+                  </div>
+                  
+                </div> <!-- Cierre de div cotenido de tarjeta -->
+              </div> <!-- Cierre de div card -->
+              
+            </div>
+        
+          </section>
+           <!-- Valoraciones -->
+           <section class="valoraciones">
+            <div class="wrap">
+              <div class="info">
+                <h4>Testimonios de clientes</h4>
+                <p>jkdkdklal</p>
+                <a href="#" class="btn">Ver todos</a>
+              </div>
+              <div class="caja destacada">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates vitae, inventore repellendus suscipit nihil ex sequi laborum delectus id nulla totam, magnam explicabo ipsa. Nihil optio dolorem ea eum culpa.</p>
+                <p>Lola López</p>
+                <div class="valoracion">
+                  <span class="m-color">
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                  </span>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+              </div>  
+              </div>
+            </div>
+          </section>
+
+          <!-- Garantias -->
+          <section class="wrap garantias">
+
+            <div class="garantia">
+              <i class="bi bi-shield-lock h2 m-color"></i>
+              <div>
+                <h5>Pago seguro</h5>
+                <p>100% garantizado</p>
+              </div>
+            </div>
+            <div class="garantia">
+              <i class="bi bi-truck h2 m-color"></i>
+              <div>
+                <h5>Envio gratis</h5>
+                <p>En pedidos de + 5</p>
+              </div>
+            </div>
+            </div>
+            <div class="garantia">
+              <i class="bi bi-box2-heart h2 m-color"></i>
+              <div>
+                <h5>Devoluciones</h5>
+                <p>Devoluciones hasta 30 días</p>
+              </div>
+            </div>
+
+          </section>
+
+        </main>
+    <footer>
+        <div class="wrap">
+            <div class="izq">
+              <h4 class="logo">Shop Vadel</h4>
+              <div class="politicas">
+                <nav>
+                  <ul>
+                    <ul>
+                      <li><a href="">Contacta con nosotros</a></li>
+                      <li><a href="">Atención al cliente</a></li>
+                      <li><a href="">Servicio telefónico</a></li>
+                </nav>
+                <nav>
+                  <ul>
+                    <li><a href="">Politica de privacidad</a></li>
+                    <li><a href="">Condiciones de compra</a></li>
+                    <li><a href="">Opiniones de clientes</a></li>
+                    <li><a href="">Aviso de privacidad y cookies</a></li>
+                </ul>
+                </nav>
+              </div>
+            </div>
+            <div class="der">
+              <h4>Únete a nuestra newsletter, bro</h4>
+
+              <form action="">
+
+                <div class="input-grp">
+                    <label for="">Email*</label>
+                    <input type="email" placeholder="email">
+                    <div class="error">Por favor, inserta un email válido</div>
+                </div>
+
+                <div class="input-grp">
+                  <label for="">
+                    <input type="checkbox">
+                    <span>Acepto la <a href="#">politica</a> de su majesta el rey</span>
+                  </label>
+                  <div class="error">Por favor, rellena tu apellido</div>
+                </div>
+
+                <input type="submit" class="btn btn-block" value="Iniciar sesión">
+
+              </form>
+
+              <div class="rrss">
+                <h5>Síguenos en redes</h5>
+                <div>
+                  <a href="#"><i class="bi bi-facebook"></i></a>
+                  <a href="#"><i class="bi bi-twitter"></i></a>
+                  <a href="#"><i class="bi bi-instagram"></i></a>
+                  <a href="#"><i class="bi bi-twitch"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+           <!--<div class="cards-home">
+             Imagenes del producto
             <div>
-                <!-- Categoría -->
-                <ul>
+                <img src="../img/abrig.jpg" alt="abrigo">
+            </div>-->
+
+            <!-- El título de las opciones de compra -->
+            <!--<div>
+                 Categoría 
+                <ul class="btn">
                     <li><a href="#">Tiena</a></li>
                     <li><a href="#">Vestidos</a></li>
                 </ul>
-                <!-- Título del producto-->
+                 Título del producto
                 <h3> Vestidos </h3>
                 <h4> Reluce este vestido de otoño</h4>
-                <h3>34€</h3>
+                <h3>34<i class="bi bi-currency-euro"></i></h3>
 
-                <!-- Añadir al carrito-->
+                 Añadir al carrito
                 <form action="">
                     <input type="number" name="cantidad" id="cantidad">
                     <button>Añadir al carrito</button>
-                </form>
+                </form>-->
                 <!-- Devoluciones-->
-                <div>
+                <!--<div>
                     <img src="../img/logo_garantia.png"  alt="logo_garantia" width="1%">
                     <p>Devoluciones hasta 30 días</p>
                 </div>
                 
             </div>
-        </div>
-
-        <!-- Segundo bloque-->
-        <ul>
+        </div> 
+         Segundo bloque-->
+        <!--<ul class="btn">
             <li>
                 <a href="caracteristicas.html">
                     <img src="#" alt="logo_caracteristicas">
@@ -80,7 +335,7 @@
                 </a>    
             </li>
         </ul>
-        <!-- Caracteristicas del producto-->
+         Caracteristicas del producto
         <p>El vestido del verano ahora en versión invierno, sí, hablamos del Pretty. Hemos diseñado el Woman con un estampado icónico, tejido de crepe, que no necesita plancha, con bolsillos y botones. Tiene manguita larga, ideal para la temporada. ¡El FAVORITO de TODAS! La modelo mide 1,62 m y lleva la talla 34.</p>
         <div>
             <div>
@@ -93,34 +348,36 @@
         </div>
         <h3>Productos relacionados</h3>
         <p>Los compradores suelen comprar productos relacionados</p>
-        <!-- Productos relacionados-->
-        <div>
-            <h3>Pantalón marrón</h3>
-            <p>Consigue ahora los mejores productos de nuestra tienda</p>
-            <button><img src="../img/pantalon-marron.jpg" alt="pantalon" style="border: black 10px solid;" width="10%" height="10%"></button>
-            <p>Consigue ahora los mejores productos en nuestra tienda</p>
-            <button>Añadir el carrito</button>
-            <button>Ver</button>
-
-            <h3>Pantalón marrón</h3>
-            <p>Consigue ahora los mejores productos de nuestra tienda</p>
-            <button><img src="../img/pantalon-marron.jpg" alt="pantalon" style="border: black 10px solid;" width="10%" height="10%"></button>
-            <p>Consigue ahora los mejores productos en nuestra tienda</p>
-            <button>Añadir el carrito</button>
-            <button>Ver</button>
-
-            <h3>Pantalón marrón</h3>
-            <p>Consigue ahora los mejores productos de nuestra tienda</p>
-            <button><img src="../img/pantalon-marron.jpg" alt="pantalon" style="border: black 10px solid;" width="10%" height="10%"></button>
-            <p>Consigue ahora los mejores productos en nuestra tienda</p>
-            <button>Añadir el carrito</button>
-            <button>Ver</button>
+        Productos relacionados-->
+        <!--<div class="producto">
+            <div class="img">
+                <img src="../img/pantalon-marron.jpg" alt="pantalon"  >
+                <h3>Pantalón marrón</h3>
+                <p>Consigue ahora los mejores productos en nuestra tienda</p>
+                <button class="m-color">Añadir el carrito</button>
+                <button class="m-color">Ver</button>
+            </div>
+            <div class="img">
+                <img src="../img/pantalon-marron.jpg" alt="pantalon" >
+                <h3>Pantalón marrón</h3>
+                <p>Consigue ahora los mejores productos en nuestra tienda</p>
+                <button class="m-color">Añadir el carrito</button>
+                <button class="m-color">Ver</button>
+            </div>
+            <div class="img">
+                <img src="../img/pantalon-marron.jpg" alt="pantalon" >
+                <h3>Pantalón marrón</h3>
+                <p>Consigue ahora los mejores productos en nuestra tienda</p>
+                <button class="m-color">Añadir el carrito</button>
+                <button class="m-color">Ver</button>
+            </div>
+           
         </div>
         
         
 
 
-<!-- Codigo para paginas futuras
+ Codigo para paginas futuras
     <div>
             
             <img src="../img/AR.jpg" alt="abrigo" style="border: black 10px solid;" width="10%" height="10%">
@@ -131,7 +388,7 @@
                 height="10%">
         </div>-->
 
-        <!-- Garantías que se ofrecen al usuario-->
+        <!-- Garantías que se ofrecen al usuario
     <ul>
         <li>
             <img src="" alt="pago">
@@ -156,10 +413,12 @@
             <p>Precios de mayorista</p>
         </li>
     </ul>  
-    </main>
+    </main>-->
 
-    <footer>
-        <div>
+    
+        <!-- Empezamos el footer 
+        <div>-->
+            <!-- Primera parte del footer 
 
             <div>
                 <h3>Vadel Shop</h3>
@@ -178,7 +437,8 @@
                     <li><a href="">Aviso de privacidad y cookies</a></li>
                 </ul>
             </div>
-            <div>
+            <div>-->
+                <!-- Ofertas y política de privacidad 
                 <p>
                     Únite a nuestra newsletter y recibe ofertas diarias
                 </p>
@@ -189,21 +449,24 @@
                         privacidad</span> de esta web
                 </form>
             </div>
-            <div>
+            <div>-->
+                <!-- Redes sociales 
                 <h4>Síguenos en redes</h4>
-                <a href=""><img src="" alt="facebook"></a>
+                <a href=""></a>
                 <a href=""><img src="" alt="yotube"></a>
                 <a href=""><img src="" alt=""></a>
-                <a href=""><img src="" alt="instagram"></a>
+                <a href=""><i class="bi bi-instagram h1"></i></i></a>
             </div>
-            <div>
+            <div>-->
+                <!-- Testimosnios de clientes 
                 <h4>Testimonios de cliente</h4>
                 <p>Consigue ahora los mejores productos nuestra tienda</p>
                 <button>Ver todo</button>
             </div>
 
         </div>
-        <div>
+        <div>-->
+            <!-- Forma de pago y tarjetas 
             <h2>Forma de pago</h2>
             <section>
                 <h3>Mis tarjetas</h3>
@@ -223,11 +486,11 @@
 
                 <button>Añadir a mis tarjetas</button>
             </form>
-        </div>
+        </div>-->
 
     </footer>
-
-
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- <script src="../js/bootstrap.bundle.min.js"></script> -->
 </body>
 
 </html>
